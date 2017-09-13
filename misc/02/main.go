@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 type shape interface {
@@ -22,6 +23,9 @@ func anotherArea(s shape) int {
 }
 
 func main() {
+	slice1 := []string {"this", "is", "a", "slice"}
 	r := Rectangle {2 , 6}
-	fmt.Print(anotherArea(r))
+	sort.Strings(slice1)
+	fmt.Println(anotherArea(r))
+	fmt.Println(slice1)
 }
