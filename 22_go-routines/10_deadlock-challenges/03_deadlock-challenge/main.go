@@ -11,9 +11,12 @@ func main() {
 		for i := 0; i < 10; i++ {
 			c <- i
 		}
+		close(c)
 	}()
+	for n := range c {
+		fmt.Println(n)
+	}
 
-	fmt.Println(<-c)
 }
 
 // Why does this only print zero?

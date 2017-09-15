@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	name := "Sydney"
+//	name := "Sydney"
+	var name interface{} = "Sydney"
 	str, ok := name.(string)
 	if ok {
 		fmt.Printf("%q\n", str)
